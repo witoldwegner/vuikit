@@ -25,18 +25,18 @@
   ],
   "scripts": {
     "dev": "start-storybook -s ./.storybook/static -p 6006",
-    "build:dist": "node -r @std/esm scripts/build.js",
-    "build:lib": "node -r @std/esm scripts/build-lib.js",
+    "build:dist": "node -r esm scripts/build.js",
+    "build:lib": "node -r esm scripts/build-lib.js",
     "build": "npm run build:lib && npm run build:dist",
-    "postbuild": "node -r @std/esm scripts/copyright.js",
+    "postbuild": "node -r esm scripts/copyright.js",
     "test": "jest"
   },
   "dependencies": {
+    "esm": "^3.2.25",
     "vue": "^2.5.16"
   },
   "devDependencies": {
     "@miljan/build": "^0.4.2",
-    "@std/esm": "^0.25.2",
     "@storybook/addon-console": "^1.0.0",
     "@storybook/vue": "^3.3.15",
     "@vue/test-utils": "^1.0.0-beta.12",
@@ -71,10 +71,6 @@
     "vue-loader": "^14.2.1",
     "vue-server-renderer": "^2.5.16",
     "vue-template-compiler": "^2.5.16"
-  },
-  "@std/esm": {
-    "mode": "js",
-    "cjs": true
   },
   "eslintConfig": {
     "globals": {

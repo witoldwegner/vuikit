@@ -4,9 +4,9 @@ run(async () => {
   await remove('dist')
 
   // build
-  await task('Build Vuikit', () => exec('yarn build', { cwd: 'packages/vuikit' }))
-  await task('Build Icons', () => exec('yarn build', { cwd: 'packages/vuikit-icons' }))
-  await task('Build Theme', () => exec('yarn build', { cwd: 'packages/vuikit-theme' }))
+  await task('Build Vuikit', () => exec('npm run build', { cwd: 'packages/vuikit' }))
+  await task('Build Icons', () => exec('npm run build', { cwd: 'packages/vuikit-icons' }))
+  await task('Build Theme', () => exec('npm run build', { cwd: 'packages/vuikit-theme' }))
 
   // package
   await Promise.all([

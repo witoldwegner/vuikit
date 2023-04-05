@@ -2,6 +2,5 @@
 yarn-error.log
 npm-debug.log
 
-dist/
 .esm-cache/
 node_modules/
